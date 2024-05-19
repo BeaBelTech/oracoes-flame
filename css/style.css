@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --amarelo: #f2955c;
+    --roxo1: #9d0aff;
+    --roxo2: #5e14e8;
+    --roxoEscuro1: #2c0943;
+    --roxoEscuro2: #0b0b0c;
+    --azul: #0922f2;
+    --branco: #f9edec;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body,
+html {
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    background: var(--roxo1) url(../img/bg_web.png) no-repeat center center;
+    background-size: cover;
+
+}
+#tela > h1 {
+    color: var(--roxo2);
+    text-transform: uppercase;
+}
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#tela {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    background-color: var(--branco);
+    height: 515px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
+    transform: translate(-50%, -50%);
+}
+
+#tela {
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#tela>h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+form {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+form>div.campo {
+    border: 2px solid var(--roxoEscuro1);
+    display: block;
+    width: 85%;
+    height: 40px;
+    border-radius: 8px;
+}
+
+form label {
+    display: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--roxoEscuro1);
+}
+
+div.campo>input,
+textarea {
+    background-color: #e1dede;
+    font-size: 1em;
+    height: 100%;
+    border: 0px;
+    border-radius: 6px;
+    padding: 4px;
+}
+textarea {
+    resize: none;
+}
+#textarea {
+    height: 27vh;
+}
+
+form>#enviar {
+    font-size: 1em;
+    width: 85%;
+    height: 40px;
+    background-color: var(--roxo2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-block: 10px;
+}
+
+form>#enviar:hover {
+    background-color: var(--roxoEscuro1);
+    transition: .2s ease-in-out;
+}

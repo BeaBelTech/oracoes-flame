@@ -1,0 +1,147 @@
+@charset "UTF=8";
+
+
+@media only screen and (max-width: 600px) {
+
+    section#tela {
+        width: 60vw;
+        height: 80vh;
+    }
+
+    #tela>h1 {
+        font-size: 4vh;
+    }
+
+    div.campo>input,
+    textarea {
+        width: calc(100% - 0px);     
+        font-size: 0.9em;   
+
+    }
+
+    form>div.campo {
+        margin: 7px 0px;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {  
+    section#tela {
+        width: 55vw;
+        height: 80vh;
+    }
+    #tela>h1 {
+        font-size: 1.5em;
+    }
+
+    div.campo>input,
+    textarea {
+        width: calc(100% - 0px);
+    }
+
+    form>div.campo {
+        margin: 7px 0px;
+    }
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    section#tela {
+        width: 50vw;
+        height: 83vh;
+    }
+
+    #tela>h1 {
+        font-size: 1.5em;
+    }
+
+    form div.campo {
+        margin: 7px 0px;
+        width: 83%;
+    }
+
+    div.campo input,
+    textarea {
+        width: 100%;
+    }
+
+    form #enviar {
+        width: 83%;
+    }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1900px) {
+    section#tela {
+        width: 40vw;
+        height: 90vh;
+    }
+
+    section#tela>div#img {
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+
+    #tela {
+        height: 100%;
+    }
+
+    #tela>h1 {
+        font-size: 1.7em;
+    }
+
+    form>div.campo {
+        height: 50px;
+    }
+
+    div.campo>input,
+    textarea {
+        width: 100%;
+    }
+
+    form>div.campo {
+        margin-block: 10px;
+    }
+}
+
+
+@media screen and (min-width: 1900px) {
+    section#tela {
+        width: 1500px;
+        height: 700px;
+    }
+
+    section#tela>div#img {
+
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+
+    #tela {
+        float: left;
+        width: 50%;
+    }
+
+    #tela>h1 {
+        font-size: 2.3em;
+    }
+
+    form>div.campo {
+        height: 70px;
+        margin: 20px 0px;
+    }
+
+    div.campo>input,
+    textarea {
+        width: 100%;
+    }
+
+    form>#enviar {
+        height: 50px;
+    }
+
+}

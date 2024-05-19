@@ -1,54 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Estilos/style.css">
-    <link rel="shortcut icon" href="img/Teens.png" type="image/x-icon">
-    <link rel="stylesheet" href="Estilos/media-query.css">
-    <title>Orações</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-query.css">
+    <title>Orações FLAME!</title>
 </head>
+
 <body>
     <main>
         <section id="tela">
-            <div id="img">
-                
-            </div>
-            <div id="form">
-                <h1>Caixinha de orações!</h1>
-                
-                <form action="https://formsubmit.co/intercessoresteens@outlook.com" method="POST" autocomplete="off">
 
-                    <!-- Nome -->
-                    <div class="campo">
-                        <label for="iname">Nome (Opcional)</label>
-                        <input type="text" name="name" id="iname" placeholder="Nome (Opcional)"/>
-                    </div>
+            <h1>Orações FLAME!</h1>
 
-                    <!-- Número -->
-                    <div class="campo">
-                        <label for="inum">Número (Opcional)</label>
-                        <input type="num" name="número" id="inum" placeholder="Número de telefone: (xx) xxxxx-xxxx" required/>
-                    </div>
+            <form action="https://formsubmit.co/intercessoresteens@outlook.com" method="POST" autocomplete="off">
 
-                    
-                    <!-- Mensagem -->
-                    <div class="campo">
-                        <label for="imessage">Oração</label>
-                        <textarea name="message" id="imessage" placeholder="Oração" required></textarea>
-                    </div>
+                <!-- Nome -->
+                <div class="campo">
+                    <label for="iname">Nome (Opcional)</label>
+                    <input type="text" name="name" id="iname" placeholder="Nome (Opcional)" />
+                </div>
 
-                    <!-- Enviar -->
-                    <input type="hidden" name="_captcha" value="false"/>
-                    <input
-                    type="hidden" 
-                    name="_next" 
-                    value="https://beabeltech.github.io/BeaBelTech/obrigado.html"
-                    />
-                    <button type="submit" id="enviar">Enviar</button>
-                </form>
-            </div>
+                <!-- Número -->
+                <div class="campo">
+                    <label for="inum">Número (Opcional)</label>
+                    <input type="num" name="número" id="inum"  required
+                        maxlength="15" minlength="11" />
+                </div>
+
+
+                <!-- Mensagem -->
+                <div class="campo" id="textarea">
+                    <label for="imessage">Oração</label>
+                    <textarea name="message" id="imessage" placeholder="Oração" required></textarea>
+                </div>
+
+                <!-- Enviar -->
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://beabeltech.github.io/BeaBelTech/obrigado.html" />
+                <button type="submit" id="enviar">Enviar</button>
+            </form>
+
         </section>
     </main>
+
+    <script defer>
+        function updatePlaceholder() {
+            const input = document.getElementById('inum');
+            if (window.innerWidth < 460) {
+                input.placeholder = 'Telefone';
+            } else {
+                input.placeholder = 'Telefone ex: (11) 12345-6789';
+            }
+        }
+
+        // Chama a função ao carregar a página
+        updatePlaceholder();
+
+        // Adiciona um evento listener para verificar a mudança de tamanho da tela
+        window.addEventListener('resize', updatePlaceholder);
+    </script>
 </body>
+
 </html>
